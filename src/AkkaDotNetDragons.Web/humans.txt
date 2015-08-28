@@ -1,0 +1,42 @@
+﻿/* TEAM */
+
+    Developer  : Herdy Handoko
+    GitHub     : https://github.com/hhandoko
+    Twitter    : https://twitter.com/_hhandoko
+    LinkedIn   : http://linkedin.com/in/herdy.handoko
+    Location   : Perth, Western Australia, Australia
+
+
+
+/* SITE */
+
+    Language   : English
+    Doctype    : HTML5
+    Tools      : - JetBrains ReSharper Ultimate 9.x
+                 - Microsoft Visual Studio Premium 2013
+				 - Microsoft Visual Studio Enterprise 2015
+                 - Mindscape Web Workbench 3.3.x
+    Fx and Libs: - Akka.NET 1.0.x                      -- Apache 2 license
+                 - Font Awesome 4.4.x                  -- MIT license & SIL OFL
+                 - Handlebars 3.0.x                    -- MIT license
+                 - JavaScript Cookie 2.0.x             -- MIT license
+                 - JavaScript MD5 1.0.x                -- MIT license
+                 - jQuery 1.11.x                       -- MIT license
+                 - Lodash 3.10.x                       -- MIT license
+                 - Machina 1.1.x                       -- MIT license
+                 - Remy Sharp EventSource Polyfill     -- MIT license
+                 - RequireJs 2.1.x                     -- MIT license
+                 - RequireJs Text 2.0.x                -- MIT license
+                 - ServiceStack 4.x                    -- Commercial license
+                     - ServiceStack
+                     - ServiceStack.Api.Swagger
+                     - ServiceStack.Logging.Elmah
+                     - ServiceStack.OrmLite.SqlServer
+                     - ServiceStack.Server
+                     - ServiceStack.Text
+                 - Skylo                               -- MIT license
+                 - Twitter Bootstrap 3.3.x             -- MIT license
+                 - Twitter Bootstrap Materials Theme   -- MIT license
+    Images     : - Windows 7 Robot (@randychiu)        -- Creative Commons     -- https://www.flickr.com/photos/randychiu/4603464896/
+                 - The Fire Dragon (23664669@N08)      -- Creative Commons     -- https://www.flickr.com/photos/23664669@N08/2806388133/
+                 - Fire Breathing Dragon               -- Creative Commons     -- https://www.flickr.com/photos/photographingtravis/15941469880/

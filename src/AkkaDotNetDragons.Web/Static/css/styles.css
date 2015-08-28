@@ -1,0 +1,170 @@
+.player, .conductor, .spectator {
+  background: #191919; }
+  .player .title, .conductor .title, .spectator .title {
+    text-align: center; }
+    .player .title .logo, .conductor .title .logo, .spectator .title .logo {
+      max-height: 30px;
+      margin-bottom: 5px; }
+    .player .title h1, .conductor .title h1, .spectator .title h1 {
+      color: #ccc;
+      font-size: 1em;
+      margin: 0 auto;
+      text-transform: uppercase; }
+
+.player .title.init .logo, .player .title.init h1 span, .spectator .title.init .logo, .spectator .title.init h1 span {
+  display: none; }
+.player .title.init h1, .spectator .title.init h1 {
+  margin-top: 41px; }
+
+.player .join {
+  margin-top: 30px; }
+.player .info {
+  text-align: center; }
+  .player .info .profile-pic {
+    border-radius: 999px;
+    margin: 20px auto; }
+  .player .info .name {
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase; }
+  .player .info .avatar {
+    color: #aaa;
+    font-size: 1em;
+    font-style: italic;
+    margin-top: -10px; }
+.player .action {
+  margin-top: 50px; }
+.player #wrap {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -60px; }
+  .player #wrap #footer-push {
+    height: 60px; }
+.player #footer {
+  clear: both;
+  position: relative;
+  height: 60px; }
+
+.conductor .system #reset-ctr {
+  margin-top: 15px; }
+.conductor .content {
+  text-align: center; }
+  .conductor .content .btn-main {
+    background: #1b5e20;
+    border-radius: 999px;
+    color: #9b9b9b;
+    cursor: pointer;
+    font-size: 2em;
+    font-family: sans-serif;
+    line-height: 128px;
+    margin: 0px auto;
+    position: relative;
+    text-align: center;
+    -webkit-transition: 0.1s ease-out;
+    -moz-transition: 0.1s ease-out;
+    -o-transition: 0.1s ease-out;
+    transition: 0.1s ease-out;
+    width: 160px;
+    height: 160px; }
+  .conductor .content .btn-main:before {
+    content: "";
+    background: #1A1A1A;
+    border-radius: 999px;
+    box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.3), inset -5px -15px 40px rgba(255, 255, 255, 0.1), inset 1px 1px 2px rgba(0, 0, 0, 0.5), inset 5px 15px 40px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 190px;
+    height: 190px;
+    z-index: -1; }
+  .conductor .content .btn-main:active {
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset 3px 15px 45px rgba(0, 0, 0, 0.2), inset -1px -1px 2px rgba(0, 0, 0, 0.5), inset -3px -15px 45px rgba(255, 255, 255, 0.1), 1px 5px 10px -4px black; }
+  .conductor .content .btn-main i {
+    margin-top: 30px;
+    margin-left: 15px; }
+.conductor .statuses {
+  margin-bottom: 20px; }
+  .conductor .statuses div {
+    text-align: center; }
+    .conductor .statuses div .btn {
+      box-shadow: none;
+      color: #ccc; }
+      .conductor .statuses div .btn i {
+        margin-top: 4px; }
+      .conductor .statuses div .btn.btn-active {
+        background-color: #1b5e20; }
+.conductor #wrap {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -120px; }
+  .conductor #wrap #footer-push {
+    height: 120px; }
+.conductor #footer {
+  clear: both;
+  position: relative;
+  height: 120px; }
+
+.spectator {
+  background: #191919; }
+  .spectator .content {
+    padding-top: 20px; }
+  .spectator .left-bubble, .spectator .right-bubble {
+    clear: both;
+    margin-bottom: 20px;
+    max-height: inherit;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out; }
+    .spectator .left-bubble.show, .spectator .right-bubble.show {
+      opacity: 1; }
+    .spectator .left-bubble .message, .spectator .right-bubble .message {
+      color: #fff;
+      font-weight: normal;
+      padding-top: 8px; }
+  .spectator .left-bubble .avatar img {
+    float: right; }
+  .spectator .right-bubble .avatar img {
+    float: left; }
+  .spectator #wrap {
+    clear: both;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -60px; }
+    .spectator #wrap #footer-push {
+      height: 60px; }
+  .spectator #footer {
+    clear: both;
+    position: relative;
+    height: 60px; }
+
+#join-form fieldset legend {
+  color: #ccc;
+  font-size: 2em; }
+#join-form input[type=text],
+#join-form input[type=email] {
+  color: #ccc; }
+#join-form button[type=submit] {
+  float: right;
+  margin-top: 0; }
+  #join-form button[type=submit] i {
+    margin-left: -5px;
+    margin-right: 5px; }
+#join-form .hint {
+  color: #ccc;
+  margin-top: 3px; }
+#join-form .form-control-wrapper {
+  margin-bottom: 30px; }
+
+html, body {
+  height: 100%; }
+
+/*# sourceMappingURL=styles.css.map */

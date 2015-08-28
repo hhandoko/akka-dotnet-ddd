@@ -1,0 +1,222 @@
+// -----------------------------------------------------------------------
+// File: styles.scss
+//
+//   Copyright (c) 2015 Akka.NET Dragons Demo contributors
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+//
+// -----------------------------------------------------------------------
+
+@import "colours";
+@import "circlebtn";
+@import "stickyfooter";
+
+// ========================================
+// Common styles
+// ========================================
+.player, .conductor, .spectator {
+    background: $bg-colour;                           // Use dark background colours
+    
+    .title {
+        text-align: center;                           // Align app title on the middle
+
+        .logo {
+            max-height: 30px;                         // Ensure logo is fixed-height
+            margin-bottom: 5px;                       // Logo is too close to the title, add some vertical padding
+        }
+
+        h1 {
+            color: $font-colour;                      // Default colour is too dark, use common font colour
+            font-size: 1em;                           // Default font size is too big, make it a bit smaller
+            margin: 0 auto;                           // Ensure the title is centre-aligned
+            text-transform: uppercase;                // Use uppercase chars as it looks nicer for a title :)
+        }
+    }
+}
+
+.player, .spectator {
+    .title.init {
+        .logo, h1 span {
+            display: none;                            // Hide all Easter Egg artifacts
+        }
+
+        h1 {
+            margin-top: 41px;                         // Ensure title is still in the same vertical position when Easter Egg is hidden
+        }
+    }
+}
+
+// ========================================
+// Page-specific
+// ========================================
+.player {
+    .join {
+        margin-top: 30px;                             // Section is too close to the top, add some vertical padding
+    }
+
+    .info {
+        text-align: center;
+
+        .profile-pic {
+            border-radius: 999px;
+            margin: 20px auto;
+        }
+
+        .name {
+            color: #fff;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+
+        .avatar {
+            color: #aaa;
+            font-size: 1em;
+            font-style: italic;
+            margin-top: -10px;
+        }
+    }
+
+    .action {
+        margin-top: 50px;
+    }
+
+    @include sticky-footer(60px, "#wrap", "#footer-push", "#footer");
+}
+
+.conductor {
+    .system {
+        #reset-ctr {
+            margin-top: 15px;                         // Reset button is too close to the top, give it a bit of whitespace
+        }
+    }
+
+    .content {
+        text-align: center;                           // Ensure the play button is centre-aligned
+
+        @include circle-btn(".btn-main", #1b5e20, 160px, 2em);
+
+        .btn-main {
+            i {
+                margin-top: 30px;                     // Fix alignment with `Play` icon
+                margin-left: 15px;                    // (as above)
+            }
+        }
+    }
+
+    .statuses {
+        margin-bottom: 20px;                          // Status buttons is too close to the logo and title, give a bit of whitespace
+
+        div {
+            text-align: center;                       // Ensure each status button is centre-aligned
+
+            .btn {
+                box-shadow: none;                     // Disable shadow as it's read-only status button
+                color: $font-colour;                  // Invert colour (default is black)    
+
+                i {
+                    margin-top: 4px;                  // Icon is too close to the top, add some vertical padding manually
+                }
+
+                &.btn-active {
+                    background-color: #1b5e20;        // Use `Material Design` green base colour
+                }
+            }
+        }
+    }
+
+    @include sticky-footer(120px, "#wrap", "#footer-push", "#footer");
+}
+
+.spectator {
+    background: $bg-colour;                           // Use dark background colours
+
+    .content {
+        padding-top: 20px;
+    }
+
+    .left-bubble, .right-bubble {
+        clear: both;
+        margin-bottom: 20px;
+        max-height: inherit;
+        opacity: 0;
+        -webkit-transition: opacity 1s ease-in-out;
+           -moz-transition: opacity 1s ease-in-out;
+             -o-transition: opacity 1s ease-in-out;
+                transition: opacity 1s ease-in-out;
+
+        &.show {
+            opacity: 1;
+        }
+
+        .message {
+            color: #fff;
+            font-weight: normal;
+            padding-top: 8px;
+        }
+    }
+
+    .left-bubble {
+        .avatar img {
+            float: right;
+        }
+    }
+
+    .right-bubble {
+        .avatar img {
+            float: left;
+        }
+    }
+    
+    @include sticky-footer(60px, "#wrap", "#footer-push", "#footer");
+}
+
+// ========================================
+// Form-specific
+// ========================================
+#join-form {
+    fieldset legend {
+        color: $font-colour;                          // Default colour is too dark, use common font colour
+        font-size: 2em;                               // Default legend font size is a bit too small, make it a bit bigger
+    }
+
+    input[type=text],
+    input[type=email] {
+        color: $font-colour;                          // Default colour is too dark, use common font colour
+    }
+
+    button[type=submit] {
+        float: right;                                 // Right-align the save / submit button to make it easier to click
+        margin-top: 0;                                // Too much vertical whitespace to the last input, reduce it to 0
+
+        i {
+            margin-left: -5px;                        // Fix alignment with `Save` icon
+            margin-right: 5px;                        // (as above)
+        }
+    }
+
+    .hint {
+        color: $font-colour;                          // Default colour is too dark, use common font colour
+        margin-top: 3px;                              // Hint is too close to the input bottom border, add some vertical padding
+    }
+
+    .form-control-wrapper {
+        margin-bottom: 30px;                          // Dynamic label sometimes overlaps with hint, add some vertical padding
+    }
+}
+
+// ========================================
+// Sticky footer support
+// ========================================
+html, body {
+    height: 100%;
+}
